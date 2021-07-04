@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<title>Restaurant summary</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+</style>
+<head>
+<script type = "text/javascript"
+         src = "{{ url_for('static', filename = 'hello.js') }}" ></script>
+       </head>
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main">
+
+  <!-- Header -->
+  <header id="portfolio">
+
+    <div class="w3-container">
+    <h1 align="Center"><b>Restaurant review</b></h1>
+    <h3 align="Center"><b><u>[Summary Extraction]</u></b><h3>
+    </div>
+  </header>
+
+  <!-- First Photo Grid-->
+  <br>
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="{{url_for('static', filename='chinese.jpg')}}" style="width:100%" class="w3-hover-opacity" onclick = "sayHello()" >
+      <div class="w3-container w3-white">
+        <br>
+        <p align ="Center"><b>John's Chinese BBQ Restaurant</b></p>
+        <form action = "http://localhost:5000/result" method = "POST">
+        <p align="Center"><input type = "submit" name="submit" value="page1" /></p>
+     </form>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+
+      <img src="{{url_for('static', filename='primary.jpg')}}" style="width:100%" class="w3-hover-opacity" onclick = "sayHello()">
+      <div class="w3-container w3-white">
+        <br>
+        <p align ="Center"><b>Primal Brewery</b></p>
+        <form action = "http://localhost:5000/result" method = "POST">
+        <p align="Center"><input type = "submit" name="submit" value="page2" /></p>
+     </form>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="{{url_for('static', filename='peels.jpg')}}" style="width:100%" class="w3-hover-opacity" onclick = "sayHello()">
+      <div class="w3-container w3-white">
+        <p align="Center"><b>Peels</b></p>
+        <form action = "http://localhost:5000/result" method = "POST">
+        <p align="Center"><input type = "submit" name="submit" value="page3" /></p>
+     </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Second Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="{{url_for('static', filename='greatclips.jpg')}}" style="width:100%" class="w3-hover-opacity" onclick = "sayHello()">
+      <div class="w3-container w3-white">
+        <p align="Center"><b>Great Clips</b></p>
+        <form action = "http://localhost:5000/result" method = "POST">
+        <p align="Center"><input type = "submit"  name="submit" value="page4" /></p>
+     </form>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="{{url_for('static', filename='delmonic.jpg')}}" style="width:100%" class="w3-hover-opacity"onclick = "sayHello()">
+      <div class="w3-container w3-white">
+        <p align="Center"><b>Delmonico Steakhouse</b></p>
+        <form action = "http://localhost:5000/result" method = "POST">
+        <p align="Center"><input type = "submit" name="submit" value="page5" /></p>
+     </form>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="{{url_for('static', filename='keg.jpg')}}" style="width:100%" class="w3-hover-opacity"onclick = "sayHello()">
+      <div class="w3-container w3-white">
+        <p align="Center"><b>The Keg Steakhouse + Bar</b></p>
+        <form action = "http://localhost:5000/result" method = "POST">
+        <p align="Center"><input type = "submit" name="submit" value="page6" /></p>
+     </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Third Photo Grid-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="{{url_for('static', filename='world.jpg')}}" style="width:100%" class="w3-hover-opacity"onclick = "sayHello()">
+      <div class="w3-container w3-white">
+        <p align="Center"><b>World Food Championships</b></p>
+        <form action = "http://localhost:5000/result" method = "POST">
+        <p align="Center"><input type = "submit" name="submit" value="page7" /></p>
+     </form>
+      </div>
+    </div>
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="{{url_for('static', filename='pace.jpg')}}" style="width:100%" class="w3-hover-opacity"onclick = "sayHello()">
+      <div class="w3-container w3-white">
+        <p align="Center"><b>Pace</b></p>
+        <form action = "http://localhost:5000/result" method = "POST">
+        <p align="Center"><input type = "submit" name="submit" value="page8" /></p>
+     </form>
+      </div>
+    </div>
+    <div class="w3-third w3-container">
+      <img src="{{url_for('static', filename='bagel.jpg')}}" style="width:100%" class="w3-hover-opacity"onclick = "sayHello()">
+      <div class="w3-container w3-white">
+        <p align="Center"><b>Bagel</b></p>
+        <form action = "http://localhost:5000/result" method = "POST">
+        <p align="Center"><input type = "submit"  name="submit" value="page9" /></p>
+     </form>
+      </div>
+    </div>
+  </div>
+  <!-- Last restaurant-->
+  <div class="w3-row-padding">
+    <div class="w3-third w3-container w3-margin-bottom">
+      <img src="{{url_for('static', filename='thebar.jpg')}}" style="width:100%" class="w3-hover-opacity" onclick = "sayHello()">
+      <div class="w3-container w3-white">
+        <p align="Center"><b>The Bar At Bermuda & St. Rose</b></p>
+        <form action = "http://localhost:5000/result" method = "POST">
+        <p align="Center"><input type = "submit" name="submit" value="page10"/></p>
+     </form>
+      </div>
+    </div>
+  </div>
+
+<!-- End page content -->
+</div>
+
+</body>
+</html>
